@@ -1,27 +1,21 @@
 package com.splearn.crowx.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
+import java.util.List;
+@Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Article {
-
-    /**
-     * id : 311
-     * author : 李老八45554
-     */
-
-    private int id;
+    private long id;
     private String author;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+    private String title;
+    private String content;
+    private Date createTime;
+    private List<Reader> reader;
 }
